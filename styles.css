@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bodyColor: hsl(233, 47%, 7%);
+    --cardColor: hsl(244, 38%, 16%);
+    --descriptionColor: hsla(0, 0%, 100%, 0.75);
+    --header-statsColor: hsl(0, 0%, 100%);
+    --p-statsColor: hsla(0, 0%, 100%, 0.6);
+    --tintColor: hsl(277, 89%, 36%);
+    --spanColor: hsl(277, 64%, 61%);
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bodyColor);
+}
+
+main {
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--cardColor);
+    padding: 0 10px 25px 10px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 260px;  
+}
+
+.mobile-imgTint {
+    background-color: var(--tintColor);
+    width: 280px;
+    height: 205px;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    left: -10px;
+}
+
+.mobilePhoto {
+    width: 280px;
+    border-radius: 20px 20px 0 0;
+    left: -10px;
+    opacity: 0.5;
+}
+
+.desktopH1, .mobileH1, .statsH2 {
+    font-family: 'Inter', sans-serif;
+    color: var(--header-statsColor);
+}
+
+.mobileH1 {
+    font-size: 25px;
+    font-weight: 700;
+    padding: 25px 0 25px 0;
+}
+
+.statsH2 {
+    letter-spacing: 1px;
+    padding: 25px 0 5px 0;
+}
+
+.desktopP, .mobileP, .statsP {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.desktopP, .mobileP {
+    color: var(--descriptionColor);
+    font-size: 12px;
+}
+
+.statsP {
+    color: var(--p-statsColor);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.desktopH1, .desktopP, .desktopPhoto, .desktop-imgTint {
+    display: none;
+}
+
+.purple{
+    color: var(--spanColor)
+}
+
+footer {
+    text-align: center;
+    color: var(--descriptionColor);
+}
+
+footer > a:hover, a:visited {
+    color: var(--spanColor);
+}
+
+@media screen and (min-width: 376px) {  
+    .card {
+        background-color: var(--cardColor);
+        max-width: fit-content;
+        margin: 50px 0 50px 0;
+        padding: 50px 40px 15px 60px;
+        border-radius: 2% 0 0 2%;
+        font-size: 15px;
+        text-align:initial;
+    }
+    
+    .mobileH1, .mobileP, .mobile-imgTint, .mobilePhoto {
+        display: none;
+    }
+
+    .desktopH1, .mobileH1 {
+        font-weight: 700;
+    }
+
+    .desktopH1, .desktopP, .desktopPhoto, .desktop-imgTint {
+        display: block;
+    }
+
+    .desktopP {
+        padding-top: 20px;
+    }
+    
+    .statsDiv {
+        display: grid;
+        grid-template-columns: repeat(3, 120px);
+        padding: 65px 45px 45px 0;
+    }
+
+    .desktopPhoto {
+        opacity: 0.5;
+        border-radius: 0 2% 2% 0;
+        height: 382px;
+    }
+
+    .desktop-imgTint {
+        height: 382px;
+        width: 462px;
+        background-color: var(--tintColor);
+        border-radius: 0 2% 2% 0;
+    }
+}
